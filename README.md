@@ -46,14 +46,22 @@
 취업 해결. 고민 해결. 친구 찾기 해결
 
 <br/>
+<h3> 🙌 여기를 눌러주세요! (프로젝트 시연 영상)</h3> 
 
- <details>
- <summary><h3> 🙌 여기를 눌러주세요! (프로젝트 시연 영상)</h3> </summary>
-<div markdown="1" align="center">       
+https://user-images.githubusercontent.com/50399088/219535817-deaba5c0-6cb9-4af5-a44f-29ca95c14cff.mp4
 
-</div>
-</details>
 
+
+# 핵심 기능
+
+* github push 기능
+![vllo](https://user-images.githubusercontent.com/50399088/219537241-fe5f970e-f510-4ace-8498-262f0f3eabe1.gif)
+
+* 통계 기능
+![vllo 3](https://user-images.githubusercontent.com/50399088/219537623-031bdddb-0af3-4e52-bc2b-b2ad208db944.gif)
+
+* 카드와 번들 생성 화면
+![vllo 4](https://user-images.githubusercontent.com/50399088/219537854-ed395299-3427-49e3-ae5d-1010a7957e5e.gif)
 
 - - -
 
@@ -89,3 +97,4 @@
 
 <p align="center"> <img width="700" alt="snowman flow" src="https://user-images.githubusercontent.com/50399088/219441868-0122e709-c367-4468-805b-45bef553fd38.png"></p>
 <br/>
+
