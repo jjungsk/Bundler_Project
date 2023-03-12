@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "NanumSquareRoundB";
+  src: url(./assets/fonts/NanumSquareRoundB.ttf);
+}
+
+:root {
+  --font-NanumSquareRoundB: "NanumSquareRoundB";
+}
+
+body {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+div {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+H1 {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+H3 {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+H4 {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+input {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+
+p {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+  color: rgb(48, 48, 48);
+}
+#bundlerBtn {
+  font-style: var(--font-NanumSquareRsoundB);
+  font-family: var(--font-NanumSquareRoundB);
+}
+#searchfont {
+  color: rgb(57, 57, 57);
+}

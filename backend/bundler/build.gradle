@@ -1,0 +1,104 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id "org.asciidoctor.jvm.convert" version "3.3.2"
+
+}
+
+group = 'com.ssafy'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+
+
+    all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    all*.exclude group: 'org.springframework.boot', module: 'logback-classic'
+
+}
+
+repositories {
+    mavenCentral()
+}
+jar {
+    enabled = false
+}
+
+dependencies {
+    //default
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'mysql:mysql-connector-java:8.0.30'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+    implementation 'com.graphql-java:graphql-java:20.0'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+
+
+    implementation 'com.auth0:java-jwt:4.2.2'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+
+    // https://mvnrepository.com/artifact/org.kohsuke/github-api
+    implementation 'org.kohsuke:github-api:1.313'
+
+
+    //test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    //database
+//    runtimeOnly 'com.h2database:h2'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.6'
+
+    //configuration
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    //rest docs
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
+    //security
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    //JUnit4
+    testImplementation("org.junit.vintage:junit-vintage-engine") {
+        exclude group: "org.hamcrest", module: "hamcrest-core"
+    }
+
+    //validation
+    implementation group: 'org.springframework.boot',
+            name: 'spring-boot-starter-validation', version: '2.5.6'
+
+
+    //query logging
+    implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
+
+    //aws s3
+    //spring-cloud-starter-aws
+    compileOnly 'org.springframework.cloud:spring-cloud-starter-aws:2.0.2.RELEASE'
+    implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.228')
+    implementation 'com.amazonaws:aws-java-sdk-s3'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation 'commons-io:commons-io:2.6'
+
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.15.3'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

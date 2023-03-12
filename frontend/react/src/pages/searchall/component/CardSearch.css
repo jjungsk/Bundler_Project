@@ -1,0 +1,12 @@
+select {
+  width: 180px;
+  padding: 0.8em 0.5em;
+  font-family: inherit;
+  background: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  align-items: center;
+  appearance: none;
+  border: 1px solid #999;
+  border-radius: 0px;
+}

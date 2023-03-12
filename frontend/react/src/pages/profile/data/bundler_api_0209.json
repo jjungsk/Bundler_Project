@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "56c8926f-3b30-4f73-8fbc-d72b1ae3e9d1",
+		"name": "bundler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13017156"
+	},
+	"item": [
+		{
+			"name": "card (다 완료)",
+			"item": [
+				{
+					"name": "💖 카드 하나 생성",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"feedType\": \"CARD\",\n\t\"feedTitle\": \"test1 카드 제목\",\n\t\"feedContent\": \"test1 카드 내용\",\n\t\"categoryId\": 20, \n\t\"cardType\": \"CARD_PROBLEM\", \n\t\"cardDescription\": \"test1 카드 부가 설명\", \n\t\"cardCommentary\": \"test1 해설\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/cards",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 카드 정보 수정",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n\t\"feedTitle\": \"test1 수정 카드 제목\", \n\t\"feedContent\": \"test1 수정 카드 내용\",\n\t\"categoryId\": 10, \n\t\"cardType\": \"CARD_PROBLEM\", \n\t\"cardDescription\": \"첫번째 카드 부가 설명\", \n\t\"cardCommentary\": \"첫번째 해설\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/cards/33",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(아직 안됨)카드 삭제 (isDeleted 1)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v2/cards/32",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"cards",
+								"32"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 카드 여러개 생성 ( error)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cardSaveRequestDtoList\": [\n        {\n        \"userId\": 1,\n        \"feedTitle\": \"test6 카드 한번에 제목\", \n        \"feedContent\": \"test6 카드 한번에 내용\",\n        \"categoryId\": 1, \n        \"cardType\": \"CARD_PROBLEM\", \n        \"cardDescription\": \"test6 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"test6 한번에 해설\"\n        },\n        {\n        \"userId\": 1,\n        \"feedTitle\": \"test6 카드 한번에 제목\", \n        \"feedContent\": \"test6 카드 한번에 내용\",\n        \"categoryId\": 1, \n        \"cardType\": \"CARD_LINK\", \n        \"cardDescription\": \"test6 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"test6 한번에 해설\"\n        },\n        {\n        \"userId\": 1,\n        \"feedTitle\": \"test7 카드 한번에 제목\", \n        \"feedContent\": \"test7 카드 한번에 내용\",\n        \"categoryId\": 1, \n        \"cardType\": \"CARD_GENERAL\", \n        \"cardDescription\": \"test7 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"test7 한번에 해설\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/cards/list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cards",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bundle (다 완료)",
+			"item": [
+				{
+					"name": "💖 빈 번들 생성 (찐완료)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"userId\": \"1\",\n    \"feedType\": \"BUNDLE\",\n    \"bundleThumbnail\": \"아무것도없는 번들\",\n    \"bundleThumbnailText\": \"아무것도없는 번들\",\n    \"feedTitle\": \"아무것도없는 번들\",\n    \"feedContent\": \"아무것도없는 번들\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bundles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bundles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들 생성 카드 여러개 생성시 같이",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"userId\": \"1\",\n    \"feedType\": \"BUNDLE\",\n    \"bundleThumbnail\": \"면준 모음집 번들\",\n    \"bundleThumbnailText\": \"면준 모음집 번들\",\n    \"feedTitle\": \"면준 모음집 번들\",\n    \"feedContent\": \"면준 모음집 번들 내용\",\n    \"cardSaveRequestDtoList\": [\n        {\n        \"userId\": 1,\n        \"feedType\": \"CARD\",\n        \"feedTitle\": \"면접 준비 카드 1\", \n        \"feedContent\": \"면접 준비 카드 1 내용\",\n        \"categoryId\": 11, \n        \"cardType\": \"CARD_PROBLEM\", \n        \"cardDescription\": \"번들1 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"번들1 한번에 해설\"\n        },\n        {\n        \"userId\": 1,\n        \"feedType\": \"CARD\",\n        \"feedTitle\": \"면접 준비 카드 1\", \n        \"feedContent\": \"면접 준비 카드 1 내용\",\n        \"categoryId\": 12, \n        \"cardType\": \"CARD_LINK\", \n        \"cardDescription\": \"번들1 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"번들1 한번에 해설\"\n        },\n        {\n        \"userId\": 1,\n        \"feedType\": \"CARD\",\n        \"feedTitle\": \"면접 준비 카드 1\", \n        \"feedContent\": \"면접 준비 카드 1 내용\",\n        \"categoryId\": 13, \n        \"cardType\": \"CARD_GENERAL\", \n        \"cardDescription\": \"번들1 카드 한번에 부가 설명\", \n        \"cardCommentary\": \"번들1 한번에 해설\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bundles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bundles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들 정보만 수정",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bundleThumbnail\": \"찐정보만수정\",\n    \"bundleThumbnailText\": \"찐정보만수정\",\n    \"feedTitle\": \"찐정보만수정\",\n    \"feedContent\": \"찐정보만수정\",\n    \"isBundlePublic\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/bundles/15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bundles",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "feed (조회 관련)",
+			"item": [
+				{
+					"name": "💖 피드 전체 조회 (찐완료)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/feeds",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"feeds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖  카드 전체 조회 (코멘트 없는 요약 버전) (찐완료)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/feeds/cards",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"feeds",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 카드 전체 조회 (코멘트까지 있는 버전) (완료) Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v5/feeds/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v5",
+								"feeds",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 카드 개별 조회  (찐완료)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/feeds/cards/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"feeds",
+								"cards",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들 전체 조회 (번들의 코멘트까지 보여줌) (찐완료)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v5/feeds/bundles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v5",
+								"feeds",
+								"bundles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들 개별 조회 (찐 완료)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v5/feeds/bundles/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v5",
+								"feeds",
+								"bundles",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scrap (다 완료)",
+			"item": [
+				{
+					"name": "💖 카드 하나 스크랩 (새로 번들을 생성하면서) 찐완료",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"2\",\n    \"bundleThumbnail\": \"스크랩하면서 번들생성\",\n    \"bundleThumbnailText\": \"스크랩하면서 번들생성\",\n    \"feedTitle\": \"스크랩하면서 번들생성\",\n    \"feedContent\": \"스크랩하면서 번들생성\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/scrap/cards/bundles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"scrap",
+								"cards",
+								"bundles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 카드 하나 스크랩(이미 있는 번들에 추가) 찐완료!!!",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cardId\": \"11\",\n\t\"bundleId\": \"24\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/scrap/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"scrap",
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들 스크랩 (찐 완료 !!@!@2)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 1,\n    \"bundleId\": 25\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/scrap/bundles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"scrap",
+								"bundles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "💖 번들에 있는 카드 스크랩 취소 @찐완료",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/scrap/bundles/13/cards/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"scrap",
+								"bundles",
+								"13",
+								"cards",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(수정중) 카드 스크랩시 사용자의 번들 summary 가져오기",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/1/bundles/summary?card_id=32",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1",
+								"bundles",
+								"summary"
+							],
+							"query": [
+								{
+									"key": "card_id",
+									"value": "32"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targetFeedId\":1,\r\n    \"content\":\"testconmtentaes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/comment",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"test comment content updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/comment/{comment_id}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"{comment_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/comment/{comment_id}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"{comment_id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get member info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/comment",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "댓글을 보냅니다.",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "태윤입니다.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/feed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"feed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Category Stat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users/2/stats",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"2",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

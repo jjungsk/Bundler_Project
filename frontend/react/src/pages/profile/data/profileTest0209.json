@@ -1,0 +1,39 @@
+{
+  "userId": 1,
+  "userEmail": "jihyo@naver.com",
+  "userNickName": "jihyo",
+  "userIntroduction": "지효예요",
+  "userProfileImage": "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202001/07/a876c63f-c6f3-445a-b948-c694a265230f.jpg",
+  "userGithubUrl": "heyjihyogithub",
+  "userFollowingCount": 125,
+  "userFollowerCount": 235,
+  "userCalendar": {
+    "year": 2023,
+    "dates": [
+      {
+        "value": "1",
+        "day": "2023-01-05"
+      },
+      {
+        "value": "1",
+        "day": "2023-01-16"
+      },
+      {
+        "value": "1",
+        "day": "2023-01-22"
+      },
+      {
+        "value": "2",
+        "day": "2023-01-24"
+      },
+      {
+        "value": "1",
+        "day": "2023-01-25"
+      },
+      {
+        "value": "2",
+        "day": "2023-02-05"
+      }
+    ]
+  }
+}
